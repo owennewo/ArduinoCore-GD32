@@ -613,6 +613,15 @@ gd_generic_gd32f30x.menu.usb.off=Off
 gd_generic_gd32f30x.menu.usb.on=On
 gd_generic_gd32f30x.menu.usb.on.build.enable_usb={build.usb_flags} -DUSBCON -DUSBD_USE_CDC
 
+gd_generic_gd32f30x.menu.pnum.XIAOMI_CYBERGEAR= Xiaomi Cybergear (GD32F303ret6)
+gd_generic_gd32f30x.menu.pnum.XIAOMI_CYBERGEAR.upload.maximum_size=524288
+gd_generic_gd32f30x.menu.pnum.XIAOMI_CYBERGEAR.upload.maximum_data_size=65536
+gd_generic_gd32f30x.menu.pnum.XIAOMI_CYBERGEAR.build.board=XIAOMI_CYBERGEAR
+gd_generic_gd32f30x.menu.pnum.XIAOMI_CYBERGEAR.build.series=GD32F30x
+gd_generic_gd32f30x.menu.pnum.XIAOMI_CYBERGEAR.build.product_line=GD32F30X_HD
+gd_generic_gd32f30x.menu.pnum.XIAOMI_CYBERGEAR.build.variant=XIAOMI_CYBERGEAR
+gd_generic_gd32f30x.menu.pnum.XIAOMI_CYBERGEAR.upload.openocd_script=target/stm32f1x.cfg
+
 # Upload menu
 gd_generic_gd32f30x.menu.upload_method.serialMethod=gd32flash (Serial)
 gd_generic_gd32f30x.menu.upload_method.serialMethod.upload.protocol=maple_serial
