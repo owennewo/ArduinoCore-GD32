@@ -857,7 +857,7 @@ static void system_clock_120m_hxtal(void)
 
     /* CK_PLL = (CK_HXTAL/2) * 30 = 120 MHz */
     RCU_CFG0 &= ~(RCU_CFG0_PLLMF | RCU_CFG0_PLLMF_4 | RCU_CFG0_PLLMF_5);
-#if (HXTAL_VALUE == 16000000U)
+#if (HXTAL_RAW_VALUE == 16000000U)
     RCU_CFG0 |= RCU_PLL_MUL15;
 #else
     RCU_CFG0 |= RCU_PLL_MUL30; // TODO: this assumes HXTAL_VALUE is 8000000
