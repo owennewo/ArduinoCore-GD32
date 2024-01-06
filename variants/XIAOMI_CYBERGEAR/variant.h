@@ -68,17 +68,10 @@ extern "C" {
 #define ANALOG_PINS_START       19
 #define ANALOG_PINS_LAST        26
 
-/* LED definitions */
-#define LED1                    PE0
-#define LED2                    PE1
-#define LED3                    PE6
 
-#define LED_BUILTIN             PB13
-#define LED_GREEN               PB13
+#define LED_BUILTIN             PA5
+#define LED_GREEN               PA5
 
-/* user keys definitions */
-#define KEY0                    PE2
-#define KEY1                    PE7
 
 /* SPI definitions */
 #define PIN_SPI_SS              PA8
