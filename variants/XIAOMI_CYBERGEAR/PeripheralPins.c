@@ -337,19 +337,19 @@ const PinMap PinMap_SPI_SSEL[] = {
 
 /* CAN PinMap */
 const PinMap PinMap_CAN_RD[] = {
-    {PORTA_11, CAN0, 3},
+    // {PORTA_11, CAN0, 3},
     {PORTB_8,  CAN0, 3 | (26 << 3)},    /* GPIO_CAN0_PARTIAL_REMAP */
-    {PORTD_0,  CAN0, 3 | (27 << 3)},    /* GPIO_CAN0_FULL_REMAP */
-    {PORTB_12, CAN1, 3},
-    {PORTB_5,  CAN1, 3 | (29 << 3)},    /* GPIO_CAN1_REMAP */
+    // {PORTD_0,  CAN0, 3 | (27 << 3)},    /* GPIO_CAN0_FULL_REMAP */
+    // {PORTB_12, CAN1, 3},
+    // {PORTB_5,  CAN1, 3 | (29 << 3)},    /* GPIO_CAN1_REMAP */
     {NC,    NC,    0}
 };
 
 const PinMap PinMap_CAN_TD[] = {
-    {PORTA_12, CAN0, 7},
+    // {PORTA_12, CAN0, 7},
     {PORTB_9,  CAN0, 7 | (26 << 3)},    /* GPIO_CAN0_PARTIAL_REMAP */
-    {PORTD_1,  CAN0, 7 | (27 << 3)},    /* GPIO_CAN0_FULL_REMAP */
-    {PORTB_13, CAN1, 7},
-    {PORTB_6,  CAN1, 7 | (29 << 3)},    /* GPIO_CAN1_REMAP */
+    // {PORTD_1,  CAN0, 7 | (27 << 3)},    /* GPIO_CAN0_FULL_REMAP */
+    // {PORTB_13, CAN1, 7},
+    // {PORTB_6,  CAN1, 7 | (29 << 3)},    /* GPIO_CAN1_REMAP */
     {NC,    NC,    0}
 };
