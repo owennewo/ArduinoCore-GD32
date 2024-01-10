@@ -838,7 +838,6 @@ static void system_clock_120m_hxtal(void)
         while(1){
         }
     }
-
     RCU_APB1EN |= RCU_APB1EN_PMUEN;
     PMU_CTL |= PMU_CTL_LDOVS;
 
@@ -848,7 +847,9 @@ static void system_clock_120m_hxtal(void)
     /* APB2 = AHB/1 */
     RCU_CFG0 |= RCU_APB2_CKAHB_DIV1;
     /* APB1 = AHB/2 */
-    RCU_CFG0 |= RCU_APB1_CKAHB_DIV2;
+    // RCU_CFG0 |= RCU_APB1_CKAHB_DIV2;
+    RCU_CFG0 |= RCU_APB1_CKAHB_DIV8;
+
 
 #if (defined(GD32F30X_HD) || defined(GD32F30X_XD))
     /* select HXTAL/2 as clock source */
