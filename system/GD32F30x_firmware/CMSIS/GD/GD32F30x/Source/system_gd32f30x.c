@@ -847,8 +847,7 @@ static void system_clock_120m_hxtal(void)
     /* APB2 = AHB/1 */
     RCU_CFG0 |= RCU_APB2_CKAHB_DIV1;
     /* APB1 = AHB/2 */
-    // RCU_CFG0 |= RCU_APB1_CKAHB_DIV2;
-    RCU_CFG0 |= RCU_APB1_CKAHB_DIV8;
+    RCU_CFG0 |= RCU_APB1_CKAHB_DIV2;
 
 
 #if (defined(GD32F30X_HD) || defined(GD32F30X_XD))
