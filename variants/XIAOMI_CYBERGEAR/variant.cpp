@@ -33,47 +33,77 @@ extern "C" {
 
 /* digital pins for pinmap list */
 const PinName digital_pins[] = {
-    PORTA_3,    //USART1_RX(TX)                     //Ardunio D0
-    PORTA_2,    //USART1_TX(RX)                     //Ardunio D1
-    PORTE_4,                                        //Ardunio D2
-    PORTD_12,   //TIMER3_CH0(PWM)                   //Ardunio D3
-    PORTB_3,                                        //Ardunio D4
-    PORTC_7,    //TIMER7_CH1(PWM)                   //Ardunio D5
-    PORTB_0,    //TIMER7_CH1_ON(PWM)                //Ardunio D6
-    PORTB_4,                                        //Ardunio D7
-    PORTD_11,                                       //Ardunio D8
-    PORTE_5,    //TIMER8_CH0(PWM)                   //Ardunio D9
-    PORTA_8,    //TIMER0_CH0(PWM)/SPI0_NSS(SS)      //Ardunio D10
-    PORTB_15,   //TIMER11_CH1(PWM)/SPI1_MOSI(MOSI)  //Ardunio D11
-    PORTB_14,   //SPI1_MISO(MISO)                   //Ardunio D12
-    PORTB_13,   //SPI1_SCK(SCK)/LED_GREEN           //Ardunio D13
-    PORTB_9,    //I2C0_SDA(SDA)                     //Ardunio D14
-    PORTB_8,    //I2C0_SCL(SCL)                     //Ardunio D15
-    PORTE_0,    //LED_D1
-    PORTE_1,    //LED_D2
-    PORTE_6,    //LED_D3
-    PORTC_0,    //ADC012_IN10                       //Ardunio A0
-    PORTC_1,    //ADC012_IN11                       //Ardunio A1
-    PORTC_2,    //ADC012_IN12                       //Ardunio A2
-    PORTC_3,    //ADC012_IN13                       //Ardunio A3
-    PORTA_0,    //ADC01_IN0                         //Ardunio A4
-    PORTB_1,    //ADC01_IN9                         //Ardunio A5
-    PORTE_2,    //KEY0
-    PORTE_7,    //KEY1
-    PORTA_4,    //DAC0
-    PORTA_5     //DAC1
+    PORTC_13,   //D0
+    PORTC_14,   //D1
+    PORTC_15,   //D2
+    PORTD_0,    //D3
+    PORTD_1,    //D4
+    PORTC_0,    //D5
+    PORTC_1,    //D6
+    PORTC_2,    //D7
+    PORTC_3,    //D8
+    PORTA_0,    //D9
+    PORTA_1,    //D10
+    PORTA_2,    //D11
+    PORTA_3,    //D12
+    PORTA_4,    //D13
+    PORTA_5,    //D14
+    PORTA_6,    //D15
+    PORTA_7,    //D16
+    PORTC_4,    //D17
+    PORTC_5,    //D18
+    PORTB_0,    //D19
+    PORTB_1,    //D20
+    PORTB_2,    //D21
+    PORTB_10,   //D22
+    PORTB_11,   //D23
+    PORTB_12,   //D24
+    PORTB_13,   //D25
+    PORTB_14,   //D26
+    PORTB_15,   //D27
+    PORTC_6,    //D28
+    PORTC_7,    //D29
+    PORTC_8,    //D30
+    PORTC_9,    //D31
+    PORTA_8,    //D32
+    PORTA_9,    //D33
+    PORTA_10,   //D34
+    PORTA_11,   //D35
+    PORTA_12,   //D36
+    PORTA_13,   //D37
+    PORTA_14,   //D38
+    PORTA_15,   //D39
+    PORTC_10,   //D40
+    PORTC_11,   //D41
+    PORTC_12,   //D42
+    PORTD_2,    //D43
+    PORTB_3,    //D44
+    PORTB_4,    //D45
+    PORTB_5,    //D46
+    PORTB_6,    //D47
+    PORTB_7,    //D48
+    PORTB_8,    //D49
+    PORTB_9,    //D50
 };
 
 /* analog pins for pinmap list */
 const uint32_t analog_pins[] = {
-    19, //A0  //Ardunio A0
-    20, //A1  //Ardunio A1
-    21, //A2  //Ardunio A2
-    22, //A3  //Ardunio A3
-    23, //A4  //Ardunio A4
-    24, //A5  //Ardunio A5
-    25, //A6
-    26, //A7
+    PC0, //A5
+    PC1, //A6
+    PC2, //A7
+    PC3, //A8
+    PA0, //A9
+    PA1, //A10
+    PA2, //A11
+    PA3, //A12
+    PA4, //A13
+    PA5, //A14
+    PA6, //A15
+    PA7, //A16
+    PC4, //A17
+    PC5, //A18
+    PB0, //A19
+    PB1, //A20
 };
 #ifdef __cplusplus
 }

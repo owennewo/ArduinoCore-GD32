@@ -60,8 +60,11 @@ SPIClass::SPIClass(PinName mosi, PinName miso, PinName sclk)
 
 void SPIClass::begin()
 {
+    // config(settings);
+
     uint32_t test = 0;
-    if (initialized) {
+    if (initialized)
+    {
         return;
     }
 
@@ -72,7 +75,8 @@ void SPIClass::begin()
 
 void SPIClass::end()
 {
-    if (initialized) {
+    if (initialized)
+    {
         spi_free(&_spi);
         initialized = false;
     }
@@ -89,7 +93,8 @@ void SPIClass::beginTransaction(SPISettings settings)
 
 void SPIClass::endTransaction(void)
 {
-    if (initialized) {
+    if (initialized)
+    {
         spi_free(&_spi);
         initialized = false;
     }
@@ -111,14 +116,17 @@ uint16_t SPIClass::transfer16(uint16_t val16)
     trans_data0 = uint8_t(val16 & 0x00FF);
     trans_data1 = uint8_t((val16 & 0xFF00) >> 8);
 
-    if (spisettings.bitorder == LSBFIRST) {
+    if (spisettings.bitorder == LSBFIRST)
+    {
         rec_data0 = transfer(trans_data0);
         rec_data1 = transfer(trans_data1);
-        out_halfword = uint16_t(rec_data0 || rec_data1 << 8);
-    } else {
+        out_halfword = uint16_t(rec_data0 | rec_data1 << 8);
+    }
+    else
+    {
         rec_data0 = transfer(trans_data1);
         rec_data1 = transfer(trans_data0);
-        out_halfword = uint16_t(rec_data1 || rec_data0 << 8);
+        out_halfword = uint16_t(rec_data1 | rec_data0 << 8);
     }
 
     return out_halfword;
@@ -148,9 +156,12 @@ void SPIClass::setDataMode(uint8_t mode)
 
 void SPIClass::setClockDivider(uint32_t divider)
 {
-    if (divider == 0) {
+    if (divider == 0)
+    {
         spisettings.speed = SPI_SPEED_DEFAULT;
-    } else {
+    }
+    else
+    {
         /* Get clk freq of the SPI instance and compute it */
         spisettings.speed = dev_spi_clock_source_frequency_get(&_spi) / divider;
     }

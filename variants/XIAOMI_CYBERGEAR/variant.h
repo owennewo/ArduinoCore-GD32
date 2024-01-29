@@ -32,60 +32,84 @@ OF SUCH DAMAGE.
 extern "C" {
 #endif // __cplusplus
 /* GPIO pins definitions */
-#define PA3  0
-#define PA2  1
-#define PE4  2
-#define PD12 3
-#define PB3  4
-#define PC7  5
-#define PB0  6
-#define PB4  7
-#define PD11 8
-#define PE5  9
-#define PA8  10
-#define PB15 11
-#define PB14 12
-#define PB13 13
-#define PB9  14
-#define PB8  15
-#define PE0  16
-#define PE1  17
-#define PE6  18
-#define PC0  19
-#define PC1  20
-#define PC2  21
-#define PC3  22
-#define PA0  23
-#define PB1  24
-#define PE2  25
-#define PE7  26
-#define PA4  27
-#define PA5  28
+#define PC13 0
+#define PC14 1
+#define PC15 2
+#define PD0 3
+#define PD1 4
+#define PC0 5
+#define PC1 6
+#define PC2 7
+#define PC3 8
+#define PA0 9
+#define PA1 10
+#define PA2 11
+#define PA3 12
+#define PA4 13
+#define PA5 14
+#define PA6 15
+#define PA7 16
+#define PC4 17
+#define PC5 18
+#define PB0 19
+#define PB1 20
+#define PB2 21
+#define PB10 22
+#define PB11 23
+#define PB12 24
+#define PB13 25
+#define PB14 26
+#define PB15 27
+#define PC6 28
+#define PC7 29
+#define PC8 30
+#define PC9 31
+#define PA8 32
+#define PA9 33
+#define PA10 34
+#define PA11 35
+#define PA12 36
+#define PA13 37
+#define PA14 38
+#define PA15 39
+#define PC10 40
+#define PC11 41
+#define PC12 42
+#define PD2 43
+#define PB3 44
+#define PB4 45
+#define PB5 46
+#define PB6 47
+#define PB7 48
+#define PB8 49
+#define PB9 50
+
 
 /* digital pins and analog pins number definitions */
-#define DIGITAL_PINS_NUM        29
-#define ANALOG_PINS_NUM         8
-#define ANALOG_PINS_START       19
-#define ANALOG_PINS_LAST        26
+#define DIGITAL_PINS_NUM        51
+#define ANALOG_PINS_NUM         16
+#define ANALOG_PINS_START       PC0
+#define ANALOG_PINS_LAST        PB1
 
 
 #define LED_BUILTIN             PA5
-#define LED_GREEN               PA5
+#define LED_BLUE                PA5
 
 
 /* SPI definitions */
-#define PIN_SPI_SS              PA8
+#define PIN_SPI_SS              PB12
 #define PIN_SPI_MOSI            PB15
 #define PIN_SPI_MISO            PB14
 #define PIN_SPI_SCK             PB13
 
+/* I2C definitions */
 /* I2C0 */
-#define HAVE_I2C
+#define HAVE_I2C  // Whilst we could remove this, it can cause issues in libraries like SimpleFOC that depend on Wire.h
 #ifndef PIN_WIRE_SDA
-#define PIN_WIRE_SDA                PB9
+#define PIN_WIRE_SDA                PB7
 #endif
 #ifndef PIN_WIRE_SCL
-#define PIN_WIRE_SCL                PB8
+#define PIN_WIRE_SCL                PB6
 #endif
 
 /* TIMER or PWM definitions */
