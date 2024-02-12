@@ -305,28 +305,28 @@ const PinMap PinMap_UART_CTS[] = {
 const PinMap PinMap_SPI_MOSI[] = {
     // {PORTA_7, SPI0, 7},
     // {PORTB_5, SPI0, 7 | (1 << 3)}, /* GPIO_SPI0_REMAP */
-    // {PORTB_15, SPI1, 7},
+    {PORTB_15, SPI1, 7},
     {PORTC_12, SPI2, 7 | (30 << 3)}, /* GPIO_SPI2_REMAP */
     {NC, NC, 0}};
 
 const PinMap PinMap_SPI_MISO[] = {
     // {PORTA_6, SPI0, 3},
     // {PORTB_4, SPI0, 3 | (1 << 3)}, /* GPIO_SPI0_REMAP */
-    // {PORTB_14, SPI1, 3},
+    {PORTB_14, SPI1, 3},
     {PORTC_11, SPI2, 1 | (30 << 3)}, /* GPIO_SPI2_REMAP */
     {NC, NC, 0}};
 
 const PinMap PinMap_SPI_SCLK[] = {
     // {PORTA_5, SPI0, 7},
     // {PORTB_3, SPI0, 7 | (1 << 3)}, /* GPIO_SPI0_REMAP */
-    // {PORTB_13, SPI1, 7},
+    {PORTB_13, SPI1, 7},
     {PORTC_10, SPI2, 7 | (30 << 3)}, /* GPIO_SPI2_REMAP */
     {NC, NC, 0}};
 
 const PinMap PinMap_SPI_SSEL[] = {
     // {PORTA_4, SPI0, 7 | (30 << 3)}, /* GPIO_SPI2_REMAP*/
     {PORTA_15, SPI0, 7}, /* GPIO_SPI2_REMAP - NO REMAP*/
-    // {PORTB_12, SPI1, 7},
+    {PORTB_12, SPI1, 7},
     {NC, NC, 0}};
 
 /* CAN PinMap */
