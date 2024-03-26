@@ -45,4 +45,15 @@ extern "C"
 }
 #endif
 
+/**
+ * Some sensible defaults for Cybergear clocks and pins.
+ * Call it from setup() in main.cpp/ino
+ */
+void initVariant()
+{
+    gpio_init(GPIOA, GPIO_MODE_OUT_PP, GPIO_OSPEED_50MHZ, 5); // LED pin PA5 os an output
+    rcu_periph_clock_enable(RCU_AF);                          // need AF clock for remap pins e.g SPI2
+    gpio_pin_remap_config(GPIO_SWJ_SWDPENABLE_REMAP, ENABLE); // we need PA15 for SPI2 so must release it JTAG duties (otherwise it is pulled high)
+}
+
 #endif /* _PINNAMESVAR_H_ */
